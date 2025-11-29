@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <VerticalLayout>
+    <VerticalLayout padding="5,5,5,5" bordercolor="#FF252526" bordersize="1" height="150">
+      <Label text="#Windows映像默认应用程序关联" font="1" padding="5,5,5,5"/>
+      <Label text="#这些设置将在首次启动计算机的OOBE阶段生效" font="0" padding="20,5,5,5"/>
+      <VerticalLayout/>
+      <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+        <HorizontalLayout/>
+        <Button name="导入" text="#导入" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+        <Button name="导出" text="#导出" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+        <Button name="删除" text="#删除" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+
+    <VerticalLayout name="联机关联" padding="5,5,5,5" height="150" bordercolor="#FF252526" bordersize="1">
+      <Label text="#Windows联机映像默认应用程序关联" font="1" padding="5,5,5,5"/>
+      <Label text="#这些设置直接影响当前计算机" font="0" padding="20,5,5,5"/>
+      <VerticalLayout/>
+      <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+        <HorizontalLayout/>
+        <Button name="导入2" text="#导入" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+        <Button name="导出2" text="#导出" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+        <Button name="重置" text="#重置" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Root>

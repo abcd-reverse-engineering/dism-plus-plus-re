@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="清理项目">
+    <TreeNode name="清理项目" height="22" inset="20,0,0,0" itemattr="valign='vcenter' font='0' width='250'" selectedbkcolor="#FFFF7F27" folderattr="visible='false'" checkboxattr="name='选择状态' padding='4,2,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'">
+      <Label name="状态" text="#等待扫描" font="0" align="left" width="120"/>
+      <!--<Label name="描述" font="0" align="left"/>-->
+    </TreeNode>
+  </DefaultControl>
+  <DefaultControl name="清理项目树根">
+    <TreeNode height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='false' padding='4,11,0,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'"/>
+  </DefaultControl>
+  <VerticalLayout>
+     <HorizontalLayout>
+       <TreeView name="垃圾清理列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3" visiblecheckbtn="true" worktype="1" padding="0,5"/>
+       
+       <VerticalLayout padding="8,4,0,0" width="250">
+         <Label text="#描述" 
+                font="1"
+                textcolor="#FF003399"
+                padding="2,2,2,2"/>
+         <Text name="SpaceRecycleUI.InfoPanel.Description"
+               font="0"
+               padding="2,2,2,2"
+               height="64"/>
+         <!--点击“清理”后将被处理的项目-->
+         <Label text="#详细信息"
+                font="1"
+                textcolor="#FF003399"
+                padding="2,2,2,2"/>
+         <richedit name="SpaceRecycleUI.InfoPanel.CleanupFileList"
+                   vscrollbar="true"
+                   readonly="true" 
+                   multiline="true" 
+                   rich="false"
+                   inset="4,4,4,4" 
+                   font="0"/>
+       </VerticalLayout>
+     
+     </HorizontalLayout>  
+    <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+      <Button name="全不选" text="#全不选" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="默认" text="#默认" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="刷新" text="#刷新" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <HorizontalLayout/>
+      <!--<Button name="详细信息" text="#详细信息" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>-->
+      <Button name="扫描" text="#扫描" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="清理" text="#清理" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <VerticalLayout>
+    <VerticalLayout height="70">
+      <Label text="#设置 Windows PE 映像的暂存空间（MB）：" font="1" padding="5,5,5,5"/>
+      <Edit width='200' name="ScratchSpace" font="0" height="30" textpadding="5,5,5,5" bordercolor="#FF252526" bordersize="1" padding="10,0,0,0" numberonly="true"/>
+    </VerticalLayout>
+    <VerticalLayout height="70">
+      <Label text="#设置 Windows PE 映像的目标路径：" font="1" padding="5,5,5,5"/>
+      <Edit width='200' name="TargetPath" font="0" height="30" textpadding="5,5,5,5" bordercolor="#FF252526" bordersize="1" padding="10,0,0,0"/>
+    </VerticalLayout>
+    <VerticalLayout/>
+    <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+      <HorizontalLayout/>
+      <Button name="刷新" text="#刷新" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="应用" text="#应用" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

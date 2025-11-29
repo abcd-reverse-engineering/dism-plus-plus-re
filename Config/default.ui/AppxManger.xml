@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="Appx项目">
+    <ListContainerElement height="80" inset="5,5,5,5">
+      <HorizontalLayout>
+        <CheckBox name="选项" width="30" padding="0,20"/>
+        <VerticalLayout>
+          <Label name="名称" font="0"/>
+          <Label name="路径" font="0" />
+          <Label name="用户" font="0" />
+        </VerticalLayout>
+        <Label name="大小" font="0" width="120"/>
+      </HorizontalLayout>
+    </ListContainerElement>
+  </DefaultControl>
+  <DefaultControl name="ProvisionedAppx项目">
+    <ListContainerElement height="30" inset="5,5,5,5">
+      <HorizontalLayout>
+        <CheckBox name="选项" width="30"/>
+        <Label name="名称" font="0"/>
+      </HorizontalLayout>
+    </ListContainerElement>
+  </DefaultControl>
+  <VerticalLayout>
+    <HorizontalLayout height="50" bkcolor="#FF9BC716" name="AppxOption">
+      <Option text="#User Appx" width="200"  textpadding="5,0,0,0" font="1" group="AppxGroup" selectedtextcolor="#FF007ACC" selected="true"/>
+      <Option text="#Provisioned Appx" width="200"  textpadding="5,0,0,0" font="1" group="AppxGroup" selectedtextcolor="#FF007ACC"/>
+    </HorizontalLayout>
+    <TabLayout name="StartTab" selectedid="0">
+      <!--Users-->
+      <VerticalLayout>
+        <List name="Appx列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+          <ListHeader bkcolor="#FFF0F7FE">
+            <ListHeaderItem text="#项目" font="0" textcolor="#FF1E1E1E"/>
+            <ListHeaderItem text="#大小" font="0" textcolor="#FF1E1E1E"  width="120"/>
+          </ListHeader>
+        </List>
+        <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+          <HorizontalLayout/>
+          <Button name="全选" text="#全选" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="删除" text="#删除" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+      
+      <!--Provisioned-->
+      <VerticalLayout>
+        <List name="ProvisionedAppx列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3"/>
+        <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+          <HorizontalLayout/>
+          <Button name="全选2" text="#全选" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="删除2" text="#删除" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </TabLayout>
+  </VerticalLayout>
+</Root>

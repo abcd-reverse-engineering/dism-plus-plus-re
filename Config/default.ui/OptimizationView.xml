@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="系统优化树根">
+    <TreeNode height="33" itemattr="valign='vcenter' font='0' textpadding='4,0,0,0'" folderattr="selected='true' width='10' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot;" checkboxattr="visible='false'" itemhottextcolor="#FF000000" selitemtextcolor="#FF000000"/>
+  </DefaultControl>
+  <DefaultControl name="系统优化项目">
+    <TreeNode height="28" inset="7,0,0,0" itemattr="textpadding='5,0,0,0' valign='vcenter' font='0'" selectedbkcolor="#FFCCE8FB" folderattr="width='0' float='true'" checkboxattr="visible='true' inset='20,0,0,0' align=&quot;left&quot; normalimage=&quot;file='Icon/Folder_Open.png' dest='0,4,20,24'&quot; font=&quot;0&quot;" itemhottextcolor="#FF000000" selitemtextcolor="#FF000000"/>
+  </DefaultControl>
+  <DefaultControl name="系统优化Combo">
+    <Combo name="Combo" width="120" enabled="false" height="28" itemfont="0" textpadding="5,0,20,0" padding="5,0,5,0" bordersize="1" borderround="2,2" bordercolor="#FF707070" bkimage="file='Icon/VScrollBarB.png' dest='110,5,127,22'"/>
+  </DefaultControl>
+  <DefaultControl name="系统优化Option">
+    <Option name="Option" width="120"  textcolor="#FF000000"  disabledtextcolor='#FF000000' textpadding='20,2,0,0' align="left" selectedimage="file='Icon/SwitchON.png' dest='28,1,92,24'" enabled="false" normalimage="file='Icon/SwitchOFF.png' dest='28,1,92,24'" disabledimage="file='Icon/SwitchDisabled.png' dest='28,1,92,24'" font='0'/>
+  </DefaultControl>
+  <DefaultControl name="系统优化Empty">
+    <Control width="130"/>
+  </DefaultControl>
+  
+  <VerticalLayout>
+    <TreeView name="系统优化树" visiblefolderbtn="true" childpadding="4" inset="5,5,5,5" bordercolor="#FF2B2B2B" vscrollbar="true" padding="10,0,10,0" itemcheckimgsize="20,20" itemhotbkcolor='#00000000' itemselectedbkcolor='#00000000'>
+      <ListHeader bkcolor="#FF9BC716">
+        <ListHeaderItem text="#项目" font="0" textcolor="#FF1E1E1E"/>
+        <ListHeaderItem name="Current" text="#当前用户" font="0" textcolor="#FF1E1E1E" width="140" tooltip="#仅针对当前用户，即 HKEY_CURRENT_USER。"/>
+        <ListHeaderItem name="Default" text="#新用户" font="0" textcolor="#FF1E1E1E" width="140" tooltip="#针对未来新建的用户，即 HKEY_USERS\DEFAULT。"/>
+        <ListHeaderItem name="System" text="#系统" font="0" textcolor="#FF1E1E1E"  width="140"  tooltip="#针对系统，即 HKEY_LOCAL_MACHINE。"/>
+      </ListHeader>
+    </TreeView>
+    <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+      <Button name="查找" text="#查找" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <HorizontalLayout/>
+      <Button name="提交规则" text="#提交规则" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="导入" text="#导入配置" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="刷新" text="#刷新" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

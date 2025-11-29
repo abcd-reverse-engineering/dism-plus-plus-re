@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="已安装项">
+    <ListContainerElement height="70" inset="5,5,5,5">
+      <HorizontalLayout>
+        <CheckBox name="选项" width="30" padding="0,20"/>
+        <VerticalLayout>
+          <Label name="产品名称|产品版本" font="0"/>
+          <Label name="更新描述" font="0"/>
+          <Label name="发行类型" font="0"/>
+        </VerticalLayout>
+        <Label name="安装日期" font="0" width="120" align="center"/>
+        <Label name="状态" font="0" width="120" align="center"/>
+      </HorizontalLayout>
+    </ListContainerElement>
+  </DefaultControl>
+  <DefaultControl name="更新项目">
+    <TreeNode name="清理项目" height="22" inset="20,0,0,0" itemattr="name='名称' valign='vcenter' font='0''" selectedbkcolor="#FFFF7F27" folderattr="visible='false'" checkboxattr="name='选择状态' padding='4,2,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'">
+      <Label name="描述" font="0" align="left"  width="80" padding="10,0,0,0"/>
+      <Label name="状态" text="#等待扫描" font="0" align="left" width="100"/>
+    </TreeNode>
+  </DefaultControl>
+  <DefaultControl name="更新项目树根">
+    <TreeNode height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='false' padding='4,11,0,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'"/>
+  </DefaultControl>
+  <VerticalLayout>
+    <HorizontalLayout height="50" name="选项">
+      <Option text="Windows Update" width="200"  textpadding="5,0,0,0" font="1" group="UpdateGroup" selectedtextcolor="#FF007ACC" selected="true"/>
+      <Option text="#已安装的更新" width="200"  textpadding="5,0,0,0" font="1" group="UpdateGroup" selectedtextcolor="#FF007ACC"/>
+      <!--<Option text="#显示/隐藏更新" width="120"  textpadding="5,0,0,0" font="0" group="UpdateGroup" selectedtextcolor="#FF007ACC"/>-->
+    </HorizontalLayout>
+    <TabLayout name="StartTab" selectedid="0">
+      <VerticalLayout>
+        <!--<List name="等待安装列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+          <ListHeader bkcolor="#FF9BC716">
+            <ListHeaderItem text="#项目" font="0" textcolor="#FF1E1E1E"/>
+            <ListHeaderItem text="#大小" font="0" textcolor="#FF1E1E1E" width="80"/>
+            <ListHeaderItem text="#状态" font="0" textcolor="#FF1E1E1E" width="80"/>
+          </ListHeader>
+        </List>-->
+        <TreeView name="等待安装列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3" visiblecheckbtn="true" worktype="1" padding="0,5"/>
+        <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+          <Button name="查找" text="#查找" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="导出地址" text="#导出地址" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <HorizontalLayout/>
+          <Button name="详细信息" text="#详细信息" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="添加" text="#添加" width="80" font="0" bordercolor="#FF252526" bordersize="1" tooltip="#将现有的本地补丁包添加至系统。"/>
+          <Button name="扫描" text="#扫描" width="80" font="0" bordercolor="#FF252526" bordersize="1" tooltip="#使用Dism++数据库扫描当前系统需要的更新列表。"/>
+          <Button name="安装" text="#安装" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1"  tooltip="#自动下载并安装更新列表中选中的更新。" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <VerticalLayout>
+        <List name="已安装列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+          <ListHeader bkcolor="#FF9BC716">
+            <ListHeaderItem name="产品名称|产品版本" text="#项目" font="0" textcolor="#FF1E1E1E"/>
+            <ListHeaderItem name="安装日期" text="#安装日期" font="0" textcolor="#FF1E1E1E" width="120"/>
+            <ListHeaderItem name="状态" text="#状态" font="0" textcolor="#FF1E1E1E" width="120"/>
+          </ListHeader>
+        </List>
+        <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+          <Button name="查找" text="#查找" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <HorizontalLayout/>
+          <Button name="刷新" text="#刷新" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="删除" text="#删除" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </TabLayout>
+
+  </VerticalLayout>
+</Root>

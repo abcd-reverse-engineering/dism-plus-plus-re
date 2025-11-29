@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="首次启动条目">
+    <TreeNode height="28" inset="10,5,5,5" folderattr="visible='false' width='0'" checkboxattr="visible='false' width='0'" itemattr="font='0'"/>
+  </DefaultControl>
+  <VerticalLayout padding="10,5,0,0">
+    <TreeView name="首次启动" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+      <TreeNode text="PreSysPrep" tooltip="#第一次启动SysPrep前运行的命令" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+      <TreeNode text="PostSysPrep" tooltip="#第一次启动SysPrep后运行的命令" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+      <TreeNode text="PreOobe" tooltip="#首次启动OOBE前运行的命令" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+      <TreeNode text="PostOobe" tooltip="#首次启动后OOBE后运行的命令" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+    </TreeView>
+    <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+      <Edit name="Cmd" font="0" bordercolor="#FF252526" bordersize="1" cuebannertext="#请在此输入需要添加的命令"/>
+      <Button name="添加" text="#添加" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="上移" text="#上移" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="删除" text="#删除" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1000,700" sizebox="4,4,6,6" caption="0,0,0,50" mininfo="800,600" roundcorner="5,5" defaultfontcolor="#FF000000">
+  <Default shared="true" name="CheckBox" value="textcolor=&quot;#FF000000&quot;  disabledtextcolor=&quot;#FF000000&quot; textpadding=&quot;20,2,0,0&quot; align=&quot;left&quot; selectedimage=&quot;file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font=&quot;0&quot;" />
+  <Default shared="true" name="VScrollBar" value="width='17' button1normalimage=&quot;file='Icon/VScrollBarA.png'&quot; button2normalimage=&quot;file='Icon/VScrollBarB.png'&quot; bkcolor='#FF3E3E42' thumbnormalimage=&quot;file='Icon/ScrollBarThumNorm.png' corner='8,8,8,8'&quot; thumbhotimage=&quot;file='Icon/ScrollBarThumHot.png' corner='8,8,8,8'&quot; thumbpushedimage=&quot;file='Icon/ScrollBarThumPushed.png' corner='8,8,8,8'&quot;"/>
+  <Default shared="true" name="TreeView" value="itemhotbkcolor='#FF007ACC' itemselectedbkcolor='#FF1C97EA'"/>
+  <Default shared="true" name="List" value="itemhotbkcolor='#FF007ACC' itemselectedbkcolor='#FF1C97EA'"/>
+  <Default shared="true" name="TreeNode" value="itemhottextcolor='#FFFFFFFF' selitemtextcolor='#FFFFFFFF'"/>
+
+  <DefaultControl name="系统标签">
+    <Container maxwidth="250" hotbkcolor="#FF1C97EA" selectedbkcolor="#FF007ACC">
+      <VerticalLayout inset="5,5,5,5">
+        <Label name="系统名称" font="0" textcolor="#FFFFFFFF"/>
+        <Label name="路径" font="0" textcolor="#FFFFFFFF"/>
+        <Label name="类型" font="0" textcolor="#FFFFFFFF"/>
+        <Label name="文本" font="0" textcolor="#FFFFFFFF"/>
+        <Progress name="进度条" height="5" value="50" bkcolor="#FFFFFFFF" SetForeColor="#FFB5E61D" visible="false"/>
+      </VerticalLayout>
+      <Option name="映像切换" group="映像列表"/>
+    </Container>
+  </DefaultControl>
+  <DefaultControl name="欢迎页">
+    <VerticalLayout>
+      <VerticalLayout/>
+      <HorizontalLayout height="300">
+        <HorizontalLayout width="30"/>
+        <Control bkimage="file='Icon/duck.png'" width="100" height="100"/>
+        <VerticalLayout  padding="0,0,40,0">
+          <Label text="#关于Dism++" 
+                font="1"
+                textcolor="#FF003399"
+                />
+          
+          <Text padding="5,0,0,0" text="#Dism++由大学时期几个强迫症晚期患者打造，追求最强功能、极致绿色、极小身材。Dism++可以说是一个Dism的GUI版，但是并不依赖Dism，直接基于更底层的CBS(Component Based Servicing Reference)。因此Dism++往往比微软自带的Dism拥有更好的兼容性以及更加轻巧的体积。" valign="center" align="left" font="0"/>
+          <Label text="#联系方式" font="1" textcolor="#FF003399" padding="0,10,0,0"/>
+          <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+            <Button name="官方网站" text="#官方网站" tooltip="https://www.chuyu.me" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="QQ" text="#QQ群" tooltip="QQ:200783396 282276394" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="邮箱" text="#邮箱" tooltip="mingkuang@live.com" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+          </HorizontalLayout>
+          <Label text="#帮助与支持" font="1" textcolor="#FF003399" padding="0,0,0,0"/>
+          <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+            <Button name="开源" text="#初雨开源" tooltip="https://github.com/Chuyu-Team" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="反馈" text="#问题反馈" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="帮助" text="#帮助文档" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+          </HorizontalLayout>
+          <Label text="#致谢" font="1" textcolor="#FF003399" padding="0,0,0,0"/>
+          <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+            <Button name="翻译" text="#翻译人员" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="赞助名单" text="#赞助名单" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+            <Button name="第三方" text="#第三方库" width="150" font="0" textcolor="#FF007ACC" align="left"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+      </HorizontalLayout>
+      <VerticalLayout/>
+    </VerticalLayout>
+  </DefaultControl>
+  <DefaultControl name="功能布局">
+    <HorizontalLayout>
+      <TreeView name="功能列表" childpadding="4" multipleitem="true" inset="4,4,3,3" bordersize="1" bordercolor="#FF2B2B2B" itemtextcolor="#FFC8C6CB" vscrollbar="true" hscrollbar="true" width="180"/>
+      <Container name="功能窗口"/>
+    </HorizontalLayout>
+  </DefaultControl>
+  <DefaultControl name="功能列表树根">
+    <TreeNode height="33" itemattr="valign='vcenter' font='0' textpadding='12,0,0,0'" folderattr="width='0' float='true'"/>
+  </DefaultControl>
+  <DefaultControl name="功能列表子树">
+    <TreeNode height="22" inset="7,0,0,0" itemattr="valign='vcenter' font='0'" folderattr="width='0' float='true'"/>
+  </DefaultControl>
+  <VerticalLayout bkcolor="#FFFFFFFF">
+    <!--<MenuBar>
+      <Menu text="文件(F)">
+        <Menu text="打开"/>
+        <Menu text="退出"/>
+      </Menu>
+      <Menu text="编辑(E)">
+        <Menu text="呵呵"/>
+      </Menu>
+    </MenuBar>-->
+    <VerticalLayout name="VerticalLayoutUI1">
+      <HorizontalLayout name="IContainer" height="100" bkcolor="#FF007ACC">
+        <!-- tabitem子项目 -->
+        <HorizontalLayout  name="Item0" height="98" bkcolor="#FF252526"/>
+        <!--<Button name="Add" text="#添加映像" width="96" height="96" bkcolor="#FF7F7F7F"/>-->
+      </HorizontalLayout>
+      <TabLayout name="映像视图"/>
+      <Label name="StatusBar" textcolor="#FFFFFFFF" bkcolor="#FF007ACC" disabledtextcolor="#FF000000" height="30" font="0"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

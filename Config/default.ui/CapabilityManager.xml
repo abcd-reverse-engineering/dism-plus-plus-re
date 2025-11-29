@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="可选功能">
+    <ListContainerElement height="70" inset="5,5,5,5">
+      <HorizontalLayout>
+        <VerticalLayout>
+          <Label name="项目名称" font="0"/>
+          <Label name="项目描述" font="0"/>
+          <Label name="大小" font="0"/>
+        </VerticalLayout>
+        <Button name="操作" text="添加" width="80" height="30" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" padding="0,15" textcolor="#FFFFFFFF"/>
+      </HorizontalLayout>
+    </ListContainerElement>
+  </DefaultControl>
+  <VerticalLayout>
+    <List name="可选功能列表" vscrollbar="true" childpadding="0,0,0,5" />
+    <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+      <CheckBox name="所有功能" text="#显示所有功能" width="120"/>
+      <HorizontalLayout/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

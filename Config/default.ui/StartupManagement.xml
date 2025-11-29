@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="服务项信息">
+    <TreeNode height="90" inset="10,5,5,5" folderattr="visible='false' width='0'" checkboxattr="visible='false' width='0'" itemattr="visible='false'">
+      <HorizontalLayout>
+        <VerticalLayout>
+          <Label name="名称" font="0"/>
+          <Label name="路径" font="0"/>
+          <Text name="描述" font="0" endellipsis="true" textcolor="#FF3E3E42"/>
+        </VerticalLayout>
+        <Combo name="类型" width="100" height="30" itemfont="0" bordersize="1" borderround="2,2" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="0,20,0,0" bkimage="file='Icon/VScrollBarB.png' dest='80,6,97,23'">
+          <ListLabelElement text="#驱动程序" visible="false"/>
+          <ListLabelElement text="#系统服务" visible="false"/>
+          <ListLabelElement text="#自动"/>
+          <ListLabelElement text="#手动"/>
+          <ListLabelElement text="#禁用"/>
+          <ListLabelElement text="#自动（延迟）"/>
+        </Combo>
+      </HorizontalLayout>
+    </TreeNode>
+  </DefaultControl>
+  <DefaultControl name="开机启动项信息">
+    <TreeNode height="70" inset="10,5,5,5" folderattr="visible='false' width='0'" checkboxattr="visible='false' width='0'" itemattr="visible='false'">
+      <HorizontalLayout>
+        <VerticalLayout>
+          <Label name="名称" font="0"/>
+          <Label name="路径" font="0"/>
+          <Text name="描述" font="0" endellipsis="true" textcolor="#FF3E3E42"/>
+        </VerticalLayout>
+        <Option name="启动项操作" width="64"  textcolor="#FF000000"  disabledtextcolor='#FF000000' textpadding='20,2,0,0' align="left" selectedimage="file='Icon/SwitchON.png' dest='0,20,64,43'" normalimage="file='Icon/SwitchOFF.png' dest='0,20,64,43'" font='0'/>
+      </HorizontalLayout>
+    </TreeNode>
+  </DefaultControl>
+  <DefaultControl name="计划任务项信息">
+    <ListContainerElement height="70" inset="10,5,5,5">
+      <HorizontalLayout>
+        <VerticalLayout>
+          <Label name="名称" font="0"/>
+          <Label name="路径" font="0"/>
+          <Text name="描述" font="0" endellipsis="true" textcolor="#FF3E3E42"/>
+        </VerticalLayout>
+        <Option name="计划项操作" width="64"  textcolor="#FF000000"  disabledtextcolor='#FF000000' textpadding='20,2,0,0' align="left" selectedimage="file='Icon/SwitchON.png' dest='0,20,64,43'" normalimage="file='Icon/SwitchOFF.png' dest='0,20,64,43'" font='0'/>
+      </HorizontalLayout>
+    </ListContainerElement>
+  </DefaultControl>
+  
+  <VerticalLayout>
+    <HorizontalLayout height="50">
+      <Option text="#开机启动项" width="150"  textpadding="5,0,0,0" font="1" group="StartupGroup" selectedtextcolor="#FF007ACC" textcolor="#FF000000" selected="true"/>
+      <Option text="#计划任务项" width="150"  textpadding="5,0,0,0" font="1" group="StartupGroup" selectedtextcolor="#FF007ACC" textcolor="#FF000000" visible="false"/>
+      <Option text="#服务项" width="150"  textpadding="5,0,0,0" font="1" group="StartupGroup" selectedtextcolor="#FF007ACC" textcolor="#FF000000"/>
+    </HorizontalLayout>
+    <TabLayout name="StartTab" selectedid="0">
+      <VerticalLayout>
+        <!--开机启动项-->
+        <TreeView name="启动项列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+          <!--<ListHeader bkcolor="#FF9BC716">
+            <ListHeaderItem text="项目名称" font="0" textcolor="#FF1E1E1E"/>
+          </ListHeader>-->
+          <TreeNode text="#系统启动项 —— HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#系统启动项32位 —— HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#系统启动项（仅启动一次） —— HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#系统启动项32位（仅启动一次） —— HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\RunOnce" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#用户启动项 —— HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#用户启动项（仅启动一次） —— HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#启动（所有用户） —— %SystemDrive%\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#启动（当前用户） —— %UserProfile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#本机启动项 —— HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#新用户启动项 —— HKU\DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode text="#新用户启动项（仅启动一次） —— HKU\DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+        </TreeView>
+        <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+          <CheckBox name="隐藏禁用" text="#隐藏禁用项" width="100" font="0"/>
+          <HorizontalLayout/>
+          <Button name="删除启动项" text="#删除" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="刷新启动项" text="#刷新" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+      
+      <VerticalLayout><!--计划任务-->
+        <List name="计划任务列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3"/>
+
+        <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+          <CheckBox name="隐藏禁用计划" text="#隐藏禁用项" width="100" font="0"/>
+          <HorizontalLayout/>
+          <Button name="删除任务" text="#删除" width="80" font="0" bordercolor="#FFC3C3C3" bordersize="1"/>
+          <Button name="刷新任务列表" text="#刷新" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FFC3C3C3" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+
+      <VerticalLayout>
+        <TreeView name="服务列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3">
+          <!--<ListHeader bkcolor="#FF9BC716">
+            <ListHeaderItem text="项目名称" font="0" textcolor="#FF1E1E1E"/>
+            <ListHeaderItem text="状态" font="0" textcolor="#FF1E1E1E" width="120"/>
+          </ListHeader>-->
+          <TreeNode name="应用服务" text="#应用服务" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode name="系统服务" text="#系统服务" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+          <TreeNode name="驱动程序" text="#驱动程序" height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,10,5,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' font='0'"/>
+        </TreeView>
+        <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+          <Button name="服务搜索" text="#查找" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <HorizontalLayout/>
+          <Button name="删除服务" text="#删除" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+          <Button name="刷新服务" text="#刷新" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FF252526" bordersize="1" textcolor="#FFFFFFFF"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </TabLayout>
+    
+  </VerticalLayout>
+</Root>

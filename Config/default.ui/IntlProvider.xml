@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <VerticalLayout>
+    <VerticalLayout bordercolor="#FF252526" bordersize="1" padding="5,5,5,5" height="100">
+      <Label text="#欢迎屏幕（系统账号）" font="1" padding="5,5,5,5" height="50" valign="top"/>
+      <HorizontalLayout  height="40">
+        <Label text="#将用户配置（格式、键盘布局等）为指定区域：" font="1" padding="5,5,5,5"/>
+        <Combo name="UserLocale-.Default" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+    <VerticalLayout bordercolor="#FF252526" bordersize="1" padding="5,5,5,5" height="100">
+      <Label text="#新用户账号" font="1" padding="5,5,5,5" height="50" valign="top"/>
+      <HorizontalLayout  height="40">
+        <Label text="#将用户配置（格式、键盘布局等）为指定区域：" font="1" padding="5,5,5,5"/>
+        <Combo name="UserLocale-Default" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+    <HorizontalLayout/>
+    <HorizontalLayout  height="40">
+      <Label text="#将时区设置调整为以下时区：" font="1" padding="5,5,5,5"/>
+      <Combo name="时区列表" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+    </HorizontalLayout>
+    <HorizontalLayout  height="40">
+      <Label text="#将非 Unicode 程序的代码页以及字体设置为指定区域：" font="1" padding="5,5,5,5"/>
+      <Combo name="SysLocale" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+    </HorizontalLayout>
+    <HorizontalLayout  height="40">
+      <Label text="#将系统默认语言调整为指定区域：" font="1" padding="5,5,5,5"/>
+      <Combo name="UILang" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="40">
+      <Label text="#调整映像中的指定 SKU 语言的所有国际设置都设置为默认值：" font="1" padding="5,5,5,5"/>
+      <Combo name="安装的语言" width="250" height="30" itemfont="0" bkcolor="#FF9BC716" textpadding="5,0,0,0" padding="5,5,0,0"/>
+    </HorizontalLayout>
+
+    <VerticalLayout/>
+    <HorizontalLayout height="40" inset="5,5,5,5" childpadding="5">
+      <HorizontalLayout/>
+      <Button name="刷新" text="#刷新" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

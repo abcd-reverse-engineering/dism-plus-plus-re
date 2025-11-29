@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="驱动树根">
+    <TreeNode height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="width='10' selected='true' padding='4,11,0,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,8,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'"/>
+  </DefaultControl>
+  <DefaultControl name="驱动子树">
+    <TreeNode height="25" inset="7,0,0,0" itemattr="valign='vcenter' font='0'" folderattr="width='10' selected='true' padding='4,7,0,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="padding='4,3,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'"/>
+  </DefaultControl>
+  <DefaultControl name="驱动信息">
+    <TreeNode height="22" inset="20,0,0,0" itemattr="valign='vcenter' font='0'" folderattr="visible='false'" checkboxattr="padding='4,2,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'"/>
+  </DefaultControl>
+  <VerticalLayout>
+    <VerticalLayout>
+      <Label text="#温馨提示：删除关键驱动可能导致计算机无法启动" font="1" padding="5,5,5,5" textcolor="#FFDE1C24"/>
+      <HorizontalLayout inset="5,5,5,5">
+        <TreeView name="驱动列表" childpadding="4" multipleitem="false"  inset="4,4,3,3" bordersize="1" bordercolor="#FF2B2B2B" itemtextcolor="#FFC8C6CB" itemhottextcolor="#FFC8C6CB" selitemtextcolor="#FFC8C6CB" vscrollbar="true" width="300" padding="5,0,0,0" itemcheckimgsize="20,20" visiblecheckbtn="true" worktype="1"/>
+        <VerticalLayout padding="10,0,5,5">
+          <Label name="关键驱动" font="0"/>
+          <Label name="类别标识" font="0"/>
+          <Label name="驱动版本" font="0"/>
+          <Label name="发布日期" font="0"/>
+          <Label name="OEM名称" font="0"/>
+          <Label name="文件路径" font="0"/>
+          <Label name="驱动大小" font="0"/>
+        </VerticalLayout>
+      </HorizontalLayout>
+    </VerticalLayout>
+    <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+      <CheckBox name="自带驱动" text="#显示内置驱动" width="150"/>
+      <HorizontalLayout/>
+      <Button name="全选" text="#全选" width="80" font="0" bordercolor="#FFC3C3C3" bordersize="1"/>
+      <Button name="导出驱动" text="#导出驱动" width="80" font="0" bordercolor="#FFC3C3C3" bordersize="1"/>
+      <Button name="删除驱动" text="#删除驱动" width="80" font="0" bordercolor="#FFC3C3C3" bordersize="1"/>
+      <Button name="添加驱动" text="#添加驱动" width="80" font="0" bkcolor="#FF007ACC" bordercolor="#FFC3C3C3" bordersize="1" textcolor="#FFFFFFFF"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>

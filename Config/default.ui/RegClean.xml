@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <DefaultControl name="注册表项目">
+    <TreeNode height="50" inset="20,0,0,0" itemattr="visible='false'" folderattr="visible='false' width='0'" checkboxattr="width='20' padding='4,8,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'">
+       <VerticalLayout>
+         <Label name="路径" font="0" align="left"/>
+         <Label name="信息" font="0" align="left"/>
+       </VerticalLayout>
+    </TreeNode>
+  </DefaultControl>
+  <DefaultControl name="注册表树根">
+    <TreeNode visible="false"  height="33" itemattr="valign='vcenter' font='0' textpadding='1,0,0,0'" folderattr="selected='true' padding='4,11,0,0' align='left' selectedimage=&quot;file='Icon/list_icon_a.png' dest='0,2,9,11'&quot; normalimage=&quot;file='Icon/list_icon_b.png' dest='0,2,9,11'&quot; font='0'" checkboxattr="name='选择状态' padding='4,8,0,0' align='left' selectedimage=&quot;file='Icon/PartChecked.png' dest='0,2,16,18'|file='Icon/checked.png' dest='0,2,16,18'&quot; normalimage=&quot;file='Icon/unchecked.png' dest='0,2,16,18'&quot; font='0'" />
+  </DefaultControl>
+  <VerticalLayout>
+    <TreeView name="注册表列表" vscrollbar="true" childpadding="3,3,3,3" inset="0,0,0,3" visiblecheckbtn="true" worktype="1" padding="0,5"/>
+    <HorizontalLayout height="40" childpadding="5" inset="5,5,5,5">
+      <Button name="全选" text="#全选" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="反选" text="#反选" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="默认" text="#默认" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <HorizontalLayout/>
+      
+      <Button name="还原" text="#还原" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="扫描" text="#扫描" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+      <Button name="清理" text="#清理" width="80" font="0" bordercolor="#FF252526" bordersize="1"/>
+  
+    </HorizontalLayout>
+  </VerticalLayout>
+</Root>
